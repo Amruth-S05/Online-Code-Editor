@@ -1,25 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from "./Navbar";
+import {useState} from "react";
+import EditorBox from "./EditorBox";
+import CompileBox from "./CompileBox";
 
 function App() {
-  return (
+    const [lang, setLang] = useState("javascript");
+    const [theme, setTheme] = useState("vs-dark");
+    const [fontSize, setFontSize] = useState(15);
+
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+        <Navbar
+            className="navbar"
+            lang={lang} setLang={setLang}
+            theme={theme} setTheme={setTheme}
+            fontSize={fontSize} setFontSize={setFontSize}
+        />
+
+        <EditorBox
+            theme={theme}
+            fontSize={fontSize}
+            lang={lang}
+        />
+
+        <CompileBox />
     </div>
-  );
+    );
 }
 
 export default App;
