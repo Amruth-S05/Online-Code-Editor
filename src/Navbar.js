@@ -3,10 +3,11 @@ import LangDropdown from "./NavbarComponents/LangDropdown";
 import ThemeDropdown from "./NavbarComponents/ThemeDropdown";
 import FontSizeControl from "./NavbarComponents/FontSizeControl";
 const Navbar = ({lang, setLang, theme, setTheme, fontSize, setFontSize}) => {
-
+    
     return (
-        <div>
-
+        
+        <div className="Navbar">
+        <h1>Code Editor</h1>     
             <div className="nav-comp-container" id="lang-dd-div">
                     <LangDropdown
                         lang={lang}
@@ -26,8 +27,10 @@ const Navbar = ({lang, setLang, theme, setTheme, fontSize, setFontSize}) => {
             </div>
 
         </div>
+        
     );
 };
 
 
 export default Navbar;
+
