@@ -1,8 +1,8 @@
 import './App.css';
-import Navbar from "./Navbar";
+import Navbar from "../Components/Navbar";
 import {useState} from "react";
-import EditorBox from "./EditorBox";
-import CompileBox from "./CompileBox";
+import EditorBox from "../EditorBox";
+import CompileBox from "../CompileBox";
 
 function App() {
     const [lang, setLang] = useState("javascript");

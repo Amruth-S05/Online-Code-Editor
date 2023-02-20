@@ -1,7 +1,7 @@
 import React from 'react';
-import LangDropdown from "./NavbarComponents/LangDropdown";
-import ThemeDropdown from "./NavbarComponents/ThemeDropdown";
-import FontSizeControl from "./NavbarComponents/FontSizeControl";
+import LangDropdown from "./Components/LangDropdown";
+import ThemeDropdown from "./Components/ThemeDropdown";
+import FontSizeControl from "./Components/FontSizeControl";
 const Navbar = ({lang, setLang, theme, setTheme, fontSize, setFontSize}) => {
     
     return (
