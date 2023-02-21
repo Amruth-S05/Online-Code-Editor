@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Problem statement 
+To design and build an online code editor for HTML, CSS, JS code snippets using HTML,CSS and React.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Inspiration 
+For any developer, often the freedom of using a local code editor may be unavailable. As online code-editors are fast, efficient and greatly popular, it is a frequently used tool among developers.
+An online code execution platform lets you write code in your favorite programming language and run that code on the same platform.
 
-## Available Scripts
+# Method
+The first part is all about building the front-end using React.js.Creating structural aspect of the site and user interface (site’s layout),using HTML and CSS then Implementing the site’s core functionality and frontend features using react and the second part is building the back-end using Express.js. In the front-end, we have three sections, a text editor, an input box, and an output box. In the back-end, we create an API and implement logic to compile the source code provided from the front-end.
 
-In the project directory, you can run:
+# Implementation
 
-### `npm start`
+## App.js
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Navbar Component
+The Navbar component is responsible for rendering the navigation bar at the top of the screen. It has several props that are used to control the behavior and appearance of the editor. These props are:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+lang: The programming language used in the editor. By default the language is set as JavaScript
+setLang: A function that is called when the user changes the programming language in the editor.
+theme: The color theme of the editor. By default the color theme is vs-dark. 
+setTheme: A function that is called when the user changes the color theme of the editor.
+fontSize: The font size of the editor. By default the font size is 15.
+setFontSize: A function that is called when the user changes the font size of the editor.
 
-### `npm test`
+## EditorBox Component
+The EditorBox component is responsible for rendering the editor on the screen. It uses the props passed down from the Navbar component to control the behavior and appearance of the editor. The props used in this component are:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+theme: The color theme of the editor. This is a string that is passed down from the Navbar component.
+fontSize: The font size of the editor. This is a number that is passed down from the Navbar component.
+lang: The programming language used in the editor. This is a string that is passed down from the Navbar component.
+CompileBox Component
+The CompileBox component is responsible for rendering the compile box on the screen. It doesn't have any props or state.
 
-### `npm run build`
+## State
+The App component uses the useState hook to manage the state of the application. It has three state variables:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+lang: The programming language used in the editor. The default value is "javascript".
+theme: The color theme of the editor. The default value is "vs-dark".
+fontSize: The font size of the editor. The default value is 15.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# App.css
+This is a stylesheet that contains the styling rules for the componentsl. It defines the appearance of the Navbar, EditorBox, and CompileBox components.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## App Component
+The .App class sets the text alignment to the center.
 
-### `npm run eject`
+## Navbar Component
+The .Navbar class sets the display to flex, aligns the items to the center, sets the padding to the left to 20 pixels, sets the height to 50 pixels, sets the text alignment to the center, sets the color to yellowgreen, sets the background color to #474747, and sets the gap between the elements to 10 pixels.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## EditorBox Component
+The .editor class sets the margin-top to 0 pixels.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## CompileBox Component
+The .run-btn class sets the position to relative, sets the width to 80 pixels, sets the font size to 22 pixels, sets the font weight to bold, sets the background color to #afec3f, sets the border to none, sets the border radius to 4 pixels, sets the transition to 0.3 seconds, and sets the cursor to a pointer. The .run-btn:active class sets the background color to black when the button is active.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The .compile-box class sets the flex property to 40%, sets the gap between the elements to 50 pixels, sets the display to flex, sets the flex direction to row, sets the background color to #242424, sets the border to 3 pixels solid #1f65e6, and sets the padding to 5 pixels. The @media rule sets the flex direction to column, sets the gap between the elements to 30 pixels, and sets the padding to 0 pixels when the screen width is less than 700 pixels.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+# Output Screenshots
+## Navbar
+![image](https://user-images.githubusercontent.com/100589347/220425057-59f419c4-cc6a-4851-8ae0-e07ab54dd3c8.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Editor Box
+![image](https://user-images.githubusercontent.com/100589347/220425643-f95c09b1-0390-400c-9c57-2dc71773ef19.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Compile Box
+![image](https://user-images.githubusercontent.com/100589347/220425868-1e708dd8-6237-4cda-8cda-ab831cc31da8.png)
 
-### Code Splitting
+# Tech Stack Used
+1.HTML
+2.CSS
+3.React
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
