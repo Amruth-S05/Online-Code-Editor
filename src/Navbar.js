@@ -25,7 +25,9 @@ const Navbar = ({lang, setLang, theme, setTheme, fontSize, setFontSize}) => {
                     fontSize={fontSize}
                     setFontSize={setFontSize} />
             </div>
-
+            <div>
+            <button className='run-btn'>Run</button>    
+            </div>
         </div>
         
     );
