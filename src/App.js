@@ -11,6 +11,7 @@ function App() {
 
     return (
     <div className="App">
+        
 
         <Navbar
             className="navbar"
@@ -18,7 +19,7 @@ function App() {
             theme={theme} setTheme={setTheme}
             fontSize={fontSize} setFontSize={setFontSize}
         />
-
+        <div className='main'>
         <EditorBox
             theme={theme}
             fontSize={fontSize}
@@ -26,6 +27,7 @@ function App() {
         />
 
         <CompileBox />
+        </div>
     </div>
     );
 }
