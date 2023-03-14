@@ -2,7 +2,7 @@ import React from 'react';
 import LangDropdown from "./NavbarComponents/LangDropdown";
 import ThemeDropdown from "./NavbarComponents/ThemeDropdown";
 import FontSizeControl from "./NavbarComponents/FontSizeControl";
-const Navbar = ({lang, setLang, theme, setTheme, fontSize, setFontSize}) => {
+const Navbar = ({lang, setLang, theme, setTheme, fontSize, setFontSize, handleRun}) => {
     
     return (
         
@@ -26,7 +26,7 @@ const Navbar = ({lang, setLang, theme, setTheme, fontSize, setFontSize}) => {
                     setFontSize={setFontSize} />
             </div>
             <div>
-            <button className='run-btn'>Run</button>    
+            <button className='run-btn' onClick={handleRun}>Run</button>
             </div>
         </div>
         
