@@ -1,7 +1,7 @@
 import React from 'react';
 import Editor from "@monaco-editor/react";
 
-const EditorBox = ({theme, fontSize, lang}) => {
+const EditorBox = ({theme, fontSize, lang, setUserCode}) => {
 
     return (
         <div className="editor">
@@ -9,16 +9,10 @@ const EditorBox = ({theme, fontSize, lang}) => {
                 theme={theme}
                 options={{fontSize: fontSize}}
                 language={lang}
-                defaultValue="// Enter your code here"
-                //defaultLanguage="javascript"
+                onChange={(value) => setUserCode(value)}
             />
-            
-            
         </div>
     );
 };
 
 export default EditorBox;
-
-
-
