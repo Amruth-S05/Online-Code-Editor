@@ -13,6 +13,7 @@ const ThemeDropdown = ({theme, setTheme}) => {
                 options={themes}
                 value={theme}
                 onChange={(e) => setTheme(e.value)}
+                isSearchable={false}        // disable typing abiltiy in search bar.
                 placeholder={theme} />
         </div>
     );
