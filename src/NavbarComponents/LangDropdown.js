@@ -1,12 +1,12 @@
 import React from 'react';
 import Select from "react-select";
 
-const LangDropdown = ({lang, setLang}) => {
+const LangDropdown = ({ lang, setLang }) => {
     const languages = [
-        {value: "javascript", label: "JavaScript"},
-        {value: "python", label: "Python3"},
-        {value: "html", label: "HTML"},
-        {value: "css", label: "CSS"},
+        { value: "javascript", label: "JavaScript" },
+        { value: "python", label: "Python3" },
+        { value: "html", label: "HTML" },
+        { value: "css", label: "CSS" },
     ]
     return (
         <div>
@@ -14,7 +14,9 @@ const LangDropdown = ({lang, setLang}) => {
                 options={languages}
                 value={lang}
                 onChange={(e) => setLang(e.value)}
-                placeholder={lang} />
+                isSearchable={false} 
+                placeholder={lang}
+            />
         </div>
     );
 };
