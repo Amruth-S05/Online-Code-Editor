@@ -7,6 +7,11 @@ const ThemeDropdown = ({theme, setTheme}) => {
         {value: "vs-dark", label: "Dark"},
     ]
 
+    const themeNames = {
+        "vs-dark": "Dark",
+        "vs": "Light"
+    };
+
     return (
         <div>
             <Select
@@ -14,7 +19,7 @@ const ThemeDropdown = ({theme, setTheme}) => {
                 value={theme}
                 onChange={(e) => setTheme(e.value)}
                 isSearchable={false}        // disable typing abiltiy in search bar.
-                placeholder={theme} />
+                placeholder={themeNames[theme]} />
         </div>
     );
 };

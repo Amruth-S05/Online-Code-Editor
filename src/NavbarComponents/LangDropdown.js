@@ -8,6 +8,13 @@ const LangDropdown = ({ lang, setLang }) => {
         { value: "html", label: "HTML" },
         { value: "css", label: "CSS" },
     ]
+
+    const languageNames = {
+        "javascript": "JavaScript",
+        "python": "Python3",
+        "html": "HTML",
+        "css": "CSS"
+    };
     return (
         <div>
             <Select
@@ -15,7 +22,7 @@ const LangDropdown = ({ lang, setLang }) => {
                 value={lang}
                 onChange={(e) => setLang(e.value)}
                 isSearchable={false} 
-                placeholder={lang}
+                placeholder={languageNames[lang]}
             />
         </div>
     );
